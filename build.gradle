@@ -66,6 +66,12 @@ dependencies {
 	testImplementation 'org.testcontainers:junit-jupiter'
 	testImplementation 'org.testcontainers:kafka'
 	testImplementation 'org.testcontainers:postgresql'
+
+	modules {
+		module('org.aspectj:aspectjrt') {
+			replacedBy('org.aspectj:aspectjweaver', "aspectjweaver is a superset of aspectjrt")
+		}
+	}
 }
 
 dependencyManagement {
